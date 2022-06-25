@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Wire the Apex class method with property">
+        <template if:true={wiredAccounts.data}>
+            <template for:each={wiredAccounts.data} for:item="acc">
+                <p key={acc.id}>
+                    <strong>{acc.Name}</strong>
+                </p>
+            </template>
+        </template>
+    </lightning-card>
+</template>
