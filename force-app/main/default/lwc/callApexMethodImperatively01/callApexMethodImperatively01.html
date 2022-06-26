@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Call Apex Method Imperatively">
+        <div class="slds-p-around_medium">
+            <lightning-button label="Load the Contacts" variant="brand" onclick={clickHandler}>
+            </lightning-button>
+            <template if:true={contacts}>
+                <template for:each={contacts} for:item="con">
+                    <p key={con.Id}>{con.FirstName}</p>
+                    <p key={con.Id}>{con.LastName}</p>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>
