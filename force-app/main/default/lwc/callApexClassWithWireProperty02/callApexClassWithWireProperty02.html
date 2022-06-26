@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Wire the apex class parameterized method with property">
+        <lightning-input type="text" label="Enter the Name" value="nameOfAccount" onchange={changeHandler}></lightning-input>
+        <template if:true={wiredAccounts.data}>
+            <template for:each={wiredAccounts.data} for:item="acc">
+                <p key={acc.Id}>{acc.Name}</p>
+            </template>
+        </template>
+    </lightning-card>
+</template>
