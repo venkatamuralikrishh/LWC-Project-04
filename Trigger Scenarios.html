@@ -13,7 +13,84 @@
 
         5.Creates the number of contacts which are equal to the number which we will enter in the Number of Locations field on the Account Object.
 
-        
+        6.Write a trigger on Account, when an account is inserted, automatically account billing address should populate into the account shipping address.
+
+        7.Write a trigger on the Account when the Account is updated check all opportunities related to the account. Update all Opportunities Stage to close lost if an opportunity created date is greater than 30 days from today and stage not equal to close won.
+
+        8.Once an Account is inserted an email should go to the System Admin user with specified text below.
+        An account has been created and the name is “Account Name”.
+
+        9.Once an Account will update then that Account will update with the total amount from All its Opportunities on the Account Level. The account field name would be ” Total Opportunity Amount “.
+
+        10.Create a field on Account Named (Client Contact lookup to Contact). Once an Account is inserted a Contact will create with the name of the Account and that Contact will be the Client Contact on the Account.
+
+        11.Create a field on Opportunity Line item(Serial No (Text)) and populate increment values once an Opportunity Line Item is added. Let’s say if we add 3 products then the sequence would be “1,2,3”. Now if we delete 2 and again add one more product this must be 4 irrespective of the deleted sequence number.
+
+        12.Write a trigger on contact to prevent duplicate records based on Contact Email & Contact Phone.
+
+        13.Write a trigger, only the system admin user should be able to delete the task.
+
+        14.Create a duplicate lead when a lead is inserted.
+
+        15.Upload any pdf file into Document first. Send an email as an attachment to the lead email Id when a lead is created.
+        Email Subject: Welcome
+        Body: Please find the attached PDF.
+
+        16.Write a trigger on Contact, when contact is inserted an email should be sent to the contact email id with a specified template. So first you need to create a text template. The template Design is below.
+
+        17.When an opportunity line item is created an email should go to Opportunity Account Client Contact — Client Contact would be a field on Account lookup to contact.
+
+        18.Write a trigger on Opportunity, when an Opportunity will insert an Opportunity Line Item should be insert by default with any of the Products associated with Opportunity.
+
+        19.Write a trigger on Account when an account is update when account type changes send an email to all its contacts that your account information has been changed.
+        Subject: Account Update Info
+        Body: Your account information has been updated successfully.
+        Account Name: XYZ.
+
+        20.Write a trigger on the Opportunity line item when a line item deletes delete an opportunity as well.
+
+        21.Once an Opportunity line item is created, insert a quotation also.
+
+        22.When an account BillingCity is updated, update all its contacts MailingCity with account BillingCity.
+
+        23.Add a field Multi-select Picklist on Account and Opportunity as well and add values A,B,C,D,F. Now if we update an Opportunity with this multi-select value Account should also update with the same picklist values.
+
+        24.Create a fields on Opportunity as Client Contact, Once an Opportunity Client Contact updates then update Account Client Contact with same on Opportunity Client Contact.
+
+        25.Create an asset when create an OpportunityLineItem with associated Account.
+
+        26.When Contact update collect all opportunity Amount And Update this amount on Account Level Field (Total Opportunity Amount).
+
+        27.Once an user is update an email should go to his Manager email Id,
+        with the total number of Account Owned by him,
+        You have assigned number of account and Account Contains Number of Contacts
+        Like
+        Subject: Your Accounts and Number of Related Contacts
+        Body : Dear User,
+        You have assigned number of account and Account Contains Number of Contacts.
+        Total Accounts = 3
+        A – 10 (i.e Account Name – Total number of Contacts)
+        B – 10
+        C – 10
+
+        28.Write a trigger on Opportunity line item , Add two picklist values in Product Family field Electronic and Books and a picklist Product type on Opportunity with same picklist values. Now once you add a line item into Opportunity, check if Opportunity Product Type is same as OpportunityLineItem Product Family let it be insert or add error The Product family does not match.
+
+        29.Once Opportunity Line Item is added to Opportunity with the specified product, then Product Total Quantities must be deduct from the Product Object
+        e.g. If we have Total Quantity 100 on Product object and we have added 50 in line items , then product must be update 100-50 = 50
+        Create Total Quantity, Available Quantity Fields on Product2 object.
+
+        30.Create a Trigger on Lead Object, which should validate the Lead Record, to make the "Lead Record's Email Id and Contact Number" mandatory.
+
+        31.Create a Trigger on the Account object, To prevent the Deletion of an Active Account.
+
+        32.Create a Trigger, to Avoid the Duplicate Lead Records Based on the LastName and Email Id.
+
+        33.Whenever New Account Record is created then needs to create an associated Contact Record automatically.
+
+        34."Create 'isActive' checkbox field on Account & one on Contact Object (trigger)
+            How to do This?
+            1. Account.isActive should be marked true when ANY of its child Contacts have 'isActive' set as true.
+            2. Account.isActive should be marked as false, when ALL of its child Contacts' 'isActive' are set as false."
         
         -->
     </body>
