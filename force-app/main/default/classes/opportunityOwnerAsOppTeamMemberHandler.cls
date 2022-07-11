@@ -1,5 +1,11 @@
 public with sharing class opportunityOwnerAsOppTeamMemberHandler {
     
+    /*
+    * Author:- Venkata Murali Krishna
+    * Description:- opportunity team member
+    * Created:- 11-July-2022
+    * Last Updated:- 11-July-2022
+    */
     //Whenever opportunity owner is modified create old owner as opportunity team member
     public static void addTeamMember(Map<Id,Opportunity> newMap, Map<Id,Opportunity> oldMap){
 
