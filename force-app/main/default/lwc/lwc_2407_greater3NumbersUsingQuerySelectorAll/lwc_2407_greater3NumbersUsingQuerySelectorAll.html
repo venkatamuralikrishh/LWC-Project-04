@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Greater of 3 Numbers Using Query Selector all" icon-name="standard:account">
+        
+        <lightning-input label="Enter First Number" name="fno" onchange={changeHandler} value={fnum}>
+        </lightning-input>
+        <lightning-input label="Enter Second Number" name="sno" onchange={changeHandler} value={snum}>
+        </lightning-input>
+        <lightning-input label="Enter Third Number" name="tno" onchange={changeHandler} value={tnum}>   
+        </lightning-input>
+
+        <lightning-button-group>
+            <lightning-button label="Click to check the Highest Number" onclick={handleClick}>
+            </lightning-button>
+        </lightning-button-group>
+        
+    </lightning-card>
+</template>

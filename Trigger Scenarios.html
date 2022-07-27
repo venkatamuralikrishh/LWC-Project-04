@@ -103,6 +103,12 @@
         
         39.For lookup relationship, before deleting the parent record the delete all the child records and then allow the deletion of parent record.
 
+        40.On Contact Object, create a new checkbox field called 'is Primary Contact'. make sure that one account has only one primary contact marked. when user creates another primary contact record then the existing primary contact for that account should be unchecked.
+
+        41.write a trigger on Account for after insert and update events. when an account record with record type 'service provider' is created or updated for billing address and amount details. then create/update an entry in 'service provider' custom object. account obj and service provider objects records should be one on one.
+
+        42.the vendor (custom object) has a one to many relationship with opportunity (lookup to vendor). we need to track the total no of opportunities with the respective vendor and also show the total amount (for closed won opportunities only).
+
         -->
     </body>
 </html>
