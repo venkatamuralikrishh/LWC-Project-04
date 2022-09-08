@@ -109,6 +109,20 @@
 
         42.the vendor (custom object) has a one to many relationship with opportunity (lookup to vendor). we need to track the total no of opportunities with the respective vendor and also show the total amount (for closed won opportunities only).
 
+	  43.trigger scenario:
+	  calculate all the child opportunities amount (which are having stage = 'closed won') and display value on the parent account record "Total Amount" field.
+
+	  	1) on inserting a new opportunity with stage name ='closed won', add Amount to 'Total Amount' on account record
+
+	  	2) on updating an existing opportunity : 
+       		if you change the amount value, Total Amount value on account should be modified.
+       		If you change the stagename from 'closed won' to any other stagename, Amount value should be substracted from 'Total Amount' from parent account.
+      		If you change the stagename from different value to 'closed won',  Amount value should be added to 'Total Amount' on account.
+
+	  	3) on deleting an existing opportunity with stageName = 'closed won', Amount value should be substracted from 'Total Amount' from parent account.
+ 
+	  	4) on un-deleting opportunity from recycle bin with stageName = 'closed won', Amount value should be added to 'Total Amount' on account.
+
         -->
     </body>
 </html>

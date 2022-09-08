@@ -1,0 +1,10 @@
+<apex:page >
+    <apex:stylesheet value="{!$Resource.External_style_sheet}"/>
+    <apex:pageblock >
+        <div class="style1">
+            Hello friends,how are you <br/> 
+            welcome to hyderabad <br/> 
+            this is salesforce session<br/> 
+        </div>
+    </apex:pageblock>
+</apex:page>

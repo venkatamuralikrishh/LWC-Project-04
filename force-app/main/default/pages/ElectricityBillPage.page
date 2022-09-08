@@ -1,0 +1,35 @@
+<apex:page controller="ElectricityBillPageClass" showHeader="true" sidebar="true">
+    <apex:image value="{!$Resource.Cat}"/>
+    <apex:form >
+        <apex:pageBlock title="Electricity Calculation">
+            <center>
+                <apex:outputText value="{!result2}"/>
+            </center>
+            <apex:pageBlockSection title="Input From User" collapsible="true" columns="1">
+                <apex:pageBlockSectionItem > 
+                    <apex:outputLabel value="Bill Amount"/>
+                    <apex:outputText value="{!result1}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Starting Reading No"/>
+                    <apex:inputText value="{!srno}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Ending Reading No"/>
+                    <apex:inputText value="{!erno}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Select :"/>
+                    <apex:selectRadio value="{!billAmount}">
+                        <apex:selectOption itemLabel="Commercial" itemValue="c"></apex:selectOption>
+                        <apex:selectOption itemLabel="Industry" itemValue="i"></apex:selectOption>
+                        <apex:selectOption itemLabel="Residential" itemValue="r"></apex:selectOption>
+                    </apex:selectRadio>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <center>
+                <apex:commandButton value="Pay Bill" action="{!payBill}"/>
+            </center>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

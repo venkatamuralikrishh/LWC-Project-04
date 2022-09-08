@@ -1,0 +1,8 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+    <aura:attribute type="String" name="parentCmp"/>
+    <c:ChildComponent aura:id="c" childCmp="{!c.method}"/>
+    <lightning:card>
+        <p> parent component</p>
+        <p> value from child component : {!v.parentCmp}</p>
+    </lightning:card>
+</aura:component>

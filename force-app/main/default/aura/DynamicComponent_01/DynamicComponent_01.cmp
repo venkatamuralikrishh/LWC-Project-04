@@ -1,0 +1,11 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction,lightning:actionOverride"
+                access="global">
+	<lightning:card title="Dynamic Component" footer="thank you">
+        <lightning:button name="first Button" label="button" onclick="{!c.displayChildComponent}"/>
+        <lightning:button name="second Button" label="clear" onclick="{!c.removeChildComponent}"/>
+        <div aura:id="dynamicCmp">
+            Dynamic Component<br/>
+            {!v.body}
+        </div>
+    </lightning:card>
+</aura:component>

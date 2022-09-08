@@ -1,0 +1,18 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <lightning:card title="Lightning Record View Form Example01">
+        <lightning:recordViewForm recordId="{!v.recordId}" objectApiName="Employee_info__c">
+            <div class="slds-box">
+                <lightning:outputField fieldName="First_name__c" />
+                <lightning:outputField fieldName="Last_name__c" />
+                <lightning:outputField fieldName="State__c" />
+            </div>
+        </lightning:recordViewForm>
+    </lightning:card>
+    <lightning:card title="Lightning Record Form Example01">
+        <lightning:recordForm
+                              recordId="{!v.recordId}"
+                              objectApiName="Employee_info__c"
+                              layoutType="Full"
+                              mode="view" />
+    </lightning:card>
+</aura:component>

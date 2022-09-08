@@ -1,0 +1,5 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<lightning:card title="Account Records Display Using Application Example" footer="thank you">
+        <lightning:datatable keyField="id" columns="{!}" data="{!}" hideCheckboxColumn="false"/>
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,20 @@
+<apex:page >
+    <style>
+        .tbstyle{background-image:none;color:red;font-size:20px;background-color:lightyellow}
+        .actab{background-color:red !important;color:white !important}
+        .inactab{background-color:orange;color:black !important}
+       
+    </style>
+    <apex:image value="{!$Resource.Cat}"/>
+    <apex:tabPanel activeTabClass="actab" selectedTab="co" inactiveTabClass="inactab" headerSpacing="20px">
+        <apex:tab label="Account" name="ac" styleClass="tbstyle"></apex:tab>
+        <apex:tab label="Contact" name="co" styleClass="tbstyle">
+            Contact no: 9876543210<br/>
+            Email: abc@gmail.com<br/>
+            Website: https://www.antra.com
+        </apex:tab>
+        <apex:tab label="Product" name="pr" styleClass="tbstyle"></apex:tab>
+        <apex:tab label="Order" name="or" styleClass="tbstyle"></apex:tab>
+        <apex:tab label="Report" name="re" styleClass="tbstyle"></apex:tab>
+    </apex:tabPanel>
+</apex:page>

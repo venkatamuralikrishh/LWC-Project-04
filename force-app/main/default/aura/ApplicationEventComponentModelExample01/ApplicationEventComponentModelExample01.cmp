@@ -1,0 +1,20 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute access="public" type="Integer" name="fno"/>
+    <aura:attribute access="public" type="Integer" name="sno"/>
+    <aura:attribute access="public" type="Integer" name="sum"/>
+    <aura:attribute access="public" type="Integer" name="diff"/>
+    <aura:attribute access="public" type="Integer" name="mul"/>
+   
+    <aura:registerEvent name="Application Event 01" type="c:ApplicationEventComponentModelExample01Event"/>
+    <lightning:card title="Application event example" footer="thank you">
+        <div class="slds-var-p-around_medium">
+            <lightning:input label="Enter First Number" name="firstNumber" type="integer" value="{!v.fno}"/>
+            <lightning:input label="Enter Second Number" name="secondNumber" type="integer" value="{!v.sno}"/>
+            <br/><br/>
+            <lightning:button label="ADD" variant="brand" onclick="{!c.addition}"/>
+            <lightning:button label="SUB" variant="brand" onclick="{!c.substraction}"/>
+            <lightning:button label="MUL" variant="brand" onclick="{!c.multiplication}"/>
+            Sum : {!v.sum}
+        </div>
+    </lightning:card>
+</aura:component>

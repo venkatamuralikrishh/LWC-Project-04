@@ -1,0 +1,29 @@
+<aura:component controller="SpoonacularIntegrationClass02" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute access="public" type="Map" name="data"/>
+    <aura:attribute access="public" type="List" name="dataToDisplayInTable"/>
+    <lightning:card title="Food Recipes">
+        <lightning:button variant="brand" label="Get Food Recipes" onclick="{!c.getFoodRecipeFromSpoonacular}"/>
+    </lightning:card>
+    <lightning:card>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>TITLE</th>
+                <th>IMAGE</th>
+                <th>CALORIES</th>
+                <th>PROTEIN</th>
+                <th>CARBS</th>
+            </tr>
+            <aura:iteration items="{!v.dataToDisplayInTable}" var="d">
+                <tr>
+                    <td>{!d.id}</td>
+                    <td>{!d.title}</td>
+                    <td><img src="{!d.image}"/></td>
+                    <td>{!d.calories}</td>
+                    <td>{!d.protein}</td>
+                    <td>{!d.carbs}</td>
+                </tr>
+            </aura:iteration>
+        </table>
+    </lightning:card>
+</aura:component>

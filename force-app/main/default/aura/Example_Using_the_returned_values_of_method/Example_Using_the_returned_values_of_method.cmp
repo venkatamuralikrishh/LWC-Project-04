@@ -1,0 +1,12 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:attribute access="public" type="Integer" name="fnumber"></aura:attribute>
+    <aura:attribute access="public" type="Integer" name="snumber"></aura:attribute>
+    <aura:attribute access="public" type="Integer" name="result"></aura:attribute>
+    
+    <lightning:card title="Square the Numbers" footer="Thank you">
+    	<lightning:input label="Enter First Number" value="{!v.fnumber}"></lightning:input>
+        <lightning:input label="Enter Second Number" value="{!v.snumber}"></lightning:input>
+        <lightning:button variant="brand" label="AddingAndSquare" onclick="{!c.addAndSquare}"></lightning:button>
+        Result is : {!v.result}
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:handler event="c:ApplicationEventComponentModelExample01Event" action="{!c.myAction}"/>
+    <aura:attribute access="public" type="Integer" name="sum"/>
+    <lightning:card title="Addition of 2 Numbers" footer="thank you">
+        <div class="slds-var-p-around_medium">
+            sum is : {!v.sum}
+        </div>
+    </lightning:card>
+</aura:component>

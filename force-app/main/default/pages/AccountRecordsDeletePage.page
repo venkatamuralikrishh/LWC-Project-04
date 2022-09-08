@@ -1,0 +1,10 @@
+<apex:page controller="AccountRecordsDeletePageClass">
+    <apex:form >
+    	<apex:pageBlock >
+            Select : <br/>
+            <apex:selectList value="{!accountlist}" size="1">
+            	<apex:selectOptions value="{!accountpicklist}"></apex:selectOptions>
+            </apex:selectList>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

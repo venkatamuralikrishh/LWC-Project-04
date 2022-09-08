@@ -1,0 +1,7 @@
+<apex:page showHeader="false" standardController="Antra_Employee__c">
+  <style>
+   body{background-color:yellow;font-size:15px !important}
+  </style>
+  <apex:detail relatedList="false">
+  </apex:detail>
+</apex:page>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuraDefinitionBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <description>Requirement :
+create a picklist and display all account names in picklist as values
+And whenever a user selects the value in picklist, display the record on the same screen in a data table format</description>
+</AuraDefinitionBundle>

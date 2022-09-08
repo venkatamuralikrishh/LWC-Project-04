@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Imperative Example">
+        <lightning-button label="Click to see Accounts" onclick={clickHandler}></lightning-button>
+        <template if:true={accounts}>
+            <template for:each={accounts} for:item="acc">
+                <p key={acc.Id}>{acc.Name}</p>
+            </template>
+        </template>
+    </lightning-card>
+    <lightning-card title="Insert record in Account">
+        <lightning-input label="Enter Name" onchange={handleChange}></lightning-input>
+        <lightning-button label="Insert" onclick={insertRecord}></lightning-button>
+        <template if:true={status}>
+            {accId}
+        </template>
+        <template if:false={status}>
+            {err2}
+        </template>
+    </lightning-card>
+</template>

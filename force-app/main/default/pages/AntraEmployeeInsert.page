@@ -1,0 +1,42 @@
+<apex:page controller="AntraEmployeeInsertClass" showHeader="true" sidebar="true">
+    <style>
+        .msg1{color:green !important}
+        .msg2{color:red !important}
+    </style>
+    <apex:form >
+        <apex:pageBlock title="Antra Employee record insertion" mode="detail">
+            <apex:pageBlockSection collapsible="true" title="Antra Employee Record Insert" columns="2">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="E Name"/>
+                    <apex:inputText label="E Name" value="{!Ename}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="E Email"/>
+                    <apex:inputText label="E Email" value="{!Email}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="E Salary"/>
+                    <apex:inputText label="E Salary" value="{!Esalary}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="E Phone"/>
+                    <apex:inputText label="E Phone" value="{!Ephone}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputText value="{!msg1}" styleClass="msg1"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputText value="{!msg2}" styleClass="msg2"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!Save}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+    <apex:pageBlock >
+        <apex:pageBlockSection columns="1">
+            <apex:listViews type="Antra_Employee__c"/>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

@@ -1,0 +1,18 @@
+<apex:page standardController="Lead" extensions="LeadExtensionSelectClass">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Name"/>
+                    <apex:inputText value="{!Lead.Name}"/>
+                </apex:pageBlockSectionItem>
+                <apex:commandButton value="select" action="{!selectRecord}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockTable value="{!l2}" var="l">
+                <apex:column value="{!l2.Name}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        
+        
+    </apex:form>
+</apex:page>

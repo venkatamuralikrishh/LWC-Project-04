@@ -1,0 +1,3 @@
+<aura:component extends="c:SetSuperComponentExample01" access="global" >
+	<aura:set attribute="nm" value="Murali Krishna"/>
+</aura:component>

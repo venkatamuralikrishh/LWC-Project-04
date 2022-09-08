@@ -1,0 +1,12 @@
+<aura:component controller="AccountComboBoxClass" 
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.myAction}"/>
+    <aura:attribute access="public" type="List" name="accListInPicklist"/>
+    <aura:attribute access="public" type="String" name="valuesList"/>
+    <aura:attribute access="public" type="List" name="cols"/>
+    <aura:attribute access="public" type="List" name="data"/>
+    <lightning:card title="Select Account Record" footer="thank you">
+        <lightning:combobox name="Account records list" label="Account Names" options="{!v.accListInPicklist}" value="{!v.valuesList}" onchange="{!c.displayRecord}"/>
+        <lightning:datatable keyField="id" columns="{!v.cols}" data="{!v.data}" hideCheckboxColumn="true"/>
+    </lightning:card>
+</aura:component>

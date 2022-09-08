@@ -1,0 +1,5 @@
+<apex:page controller="Schema_Example01">
+    <apex:dataTable value="{!sc}" var="s">
+        <apex:column value="{!s}"/>
+    </apex:dataTable>
+</apex:page>

@@ -1,0 +1,18 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute access="public" type="Integer" name="fno"></aura:attribute>
+    <aura:attribute access="public" type="Integer" name="sno"></aura:attribute>
+    <aura:attribute access="public" type="Integer" name="result"></aura:attribute>
+    <lightning:card title="Number Calculation" footer="Thank you">
+        <div class="slds-p-left_medium slds-p-right_medium">
+            <lightning:input type="number" name="FIRST NUMBER" label="FIRST NUMBER" value="{!v.fno}"></lightning:input>
+            <br/><br/>
+            <lightning:input type="number" name="SECOND NUMBER" label="SECOND NUMBER" value="{!v.sno}"></lightning:input>
+            <br/><br/>
+            <lightning:button variant="brand" label="Add" onclick="{!c.addition}"></lightning:button>
+            <lightning:button variant="brand" label="Sub" onclick="{!c.substraction}"></lightning:button>
+            <lightning:button variant="brand" label="Mul" onclick="{!c.multiplication}"></lightning:button>
+            <br/><br/>
+            Result is : {!v.result}
+        </div>
+    </lightning:card>
+</aura:component>

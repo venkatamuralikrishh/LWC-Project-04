@@ -1,0 +1,17 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute access="public" name="fname" type="string"></aura:attribute> <!--Input(instance) variable in apex class-->
+    <aura:attribute access="public" name="lname" type="string"></aura:attribute> 
+    <aura:attribute access="public" name="result" type="string"></aura:attribute>
+    
+    <lightning:card footer="Thank You" title="Enter Details"> <!--white background for section-->
+        <div class="slds-p-left_medium slds-p-right_medium"> <!--padding for div container available in SLDS-->
+            <lightning:input label="First Name" value="{!v.fname}"></lightning:input>
+            <br/><br/>
+            <lightning:input label="Last Name" value="{!v.lname}"></lightning:input> 
+            <br/><br/>
+            <lightning:button variant="brand" label="Full Name" onclick="{!c.addTwoStrings}" />
+            <br/><br/>
+            Result is : {!v.result}
+        </div>
+    </lightning:card>
+</aura:component>

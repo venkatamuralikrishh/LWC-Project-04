@@ -1,0 +1,12 @@
+<template>
+    <template if:true={condition}>
+        <lightning-card title="Conditional Rendering">
+            <lightning-input label="Enter First Name"></lightning-input>
+            <lightning-input label="Enter Second Name"></lightning-input>
+        </lightning-card>
+    </template>
+    <template if:false={condition}>
+        <lightning-button label="Click Buttton to submit the form" onclick={handleButton}>
+        </lightning-button>
+    </template>
+</template>

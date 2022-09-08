@@ -1,0 +1,29 @@
+<aura:component controller="AccountDisplay" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:handler name="init" value="{!this}" action="{!c.getAccountData}"></aura:handler>
+    <aura:attribute access="public" type="List" name="accList"></aura:attribute>
+    <aura:attribute access="public" type="String" name="msg"></aura:attribute>
+    <lightning:card title="Account Details" footer="Thank You">
+        <table>
+        	<tr>
+            	<th>Name</th>
+                <th>Type</th>
+                <th>BillingCity</th>
+                <th>ShippingCity</th>
+                <th>ParentId</th>
+            </tr>
+            <aura:iteration items="{!v.accList}" var="acc">
+            	<tr>
+                	<td>{!acc.Name}</td>
+                    <td>{!acc.Type}</td>
+                    <td>{!acc.BillingCity}</td>
+                    <td>{!acc.ShippingCity}</td>
+                    <td>{!acc.ParentId}</td>
+                </tr>
+            </aura:iteration>
+            <tr>
+            	{!v.msg}
+            </tr>
+        </table>
+    	
+    </lightning:card>
+</aura:component>

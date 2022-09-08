@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:handler event="c:ApplicationEventComponentModelExample01Event" action="{!c.myAction}"/>
+    <aura:attribute access="public" type="Integer" name="sub"/>
+    <lightning:card title="Substraction of 2 Numbers" footer="thank you">
+        <div class="slds-var-p-around_medium">
+            Substraction : {!v.sub}
+        </div>
+    </lightning:card>
+</aura:component>

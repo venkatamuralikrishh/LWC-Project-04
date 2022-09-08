@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="basic example for input tags in LWC">
+        <lightning-input label="enter name" onchange={changeHandler}></lightning-input>
+        name : {name}
+        <lightning-input type="color" label="color" value="#FFFFFF"></lightning-input>
+        <lightning-input type="range" label="Number" min="0" max="10">
+        </lightning-input>
+        <lightning-input type="search" label="Search"> </lightning-input>
+        <lightning-input type="search" label="Search" is-loading> </lightning-input>
+        <lightning-input type="time" label="Time"> </lightning-input>
+        <lightning-input type="toggle" label="Toggle value" checked>
+        </lightning-input>
+        <lightning-input label="Event Name" placeholder="Grand Opening" field-level-help="The event name must 50 characters or less" maxlength="50">
+    </lightning-input>
+    </lightning-card>
+</template>

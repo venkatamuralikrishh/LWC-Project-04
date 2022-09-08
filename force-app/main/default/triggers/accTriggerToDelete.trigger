@@ -4,5 +4,3 @@ trigger accTriggerToDelete on Account (after update) {
 		accTriggerToDeleteHandler.deleteAccRecord(trigger.oldMap, trigger.newMap);
 	}
 }
-
-

@@ -1,0 +1,14 @@
+<apex:page controller="AntraEmployeeDeletePicklistClass" showHeader="true" sidebar="true">
+    <apex:form >
+        <apex:pageBlock >
+            
+            <apex:outputText value="{!msg}"></apex:outputText>
+            Select :
+            <apex:selectList value="{!listOfEmp}" size="1">
+                <apex:selectOptions value="{!picklist}"/>
+            </apex:selectList>
+            <apex:commandButton value="Delete" action="{!deleterecords}"/>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

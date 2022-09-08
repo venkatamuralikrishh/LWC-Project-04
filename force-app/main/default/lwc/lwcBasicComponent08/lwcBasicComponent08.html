@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Slots in LWC">
+        <c-lwc-basic-component08-child>
+            <h1>This is Parent Component</h1>
+            <h1 slot="firstSlot" style="color:blue">Content from parent to first slot in child component</h1>
+            <h1 slot="secondSlot" style="color:chartreuse">Content from parent to second slot in child component</h1>
+        </c-lwc-basic-component08-child>
+    </lightning-card>
+    <lightning-card title="Slots in LWC">
+        <c-lwc-basic-component08-child>
+            <h1>This is Parent Component</h1>
+            <h1 slot="firstSlot" style="color:aqua">second time composing the child component</h1>
+            <h1 slot="secondSlot" style="color:deepskyblue">second time composing the child component</h1>
+        </c-lwc-basic-component08-child>
+    </lightning-card>
+</template>

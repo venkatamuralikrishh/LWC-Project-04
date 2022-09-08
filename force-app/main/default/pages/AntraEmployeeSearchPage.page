@@ -1,0 +1,9 @@
+<apex:page controller="AntraEmployeeSearchPageClass">
+    <apex:form >
+    	<apex:pageBlock >
+        	<apex:inputText value="{!selectname}"/>
+            <apex:commandButton value="Delete" action="{!deleteRecord}"/>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,7 @@
+<apex:page >
+    <center>
+        <font color="green" size="50px">
+            Deleted SuccessFully
+        </font>
+    </center>
+</apex:page>

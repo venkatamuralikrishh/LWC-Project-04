@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuraDefinitionBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <description>For Application Event Example 2:
+Getting the data Account object and displaying it in another components...3 fields in one component and 3 fields in another component</description>
+</AuraDefinitionBundle>

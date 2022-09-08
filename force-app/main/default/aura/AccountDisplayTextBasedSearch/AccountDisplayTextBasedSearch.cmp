@@ -1,0 +1,27 @@
+<aura:component controller="AccountDisplayTextBasedSearch" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute access="public" type="String" name="text"/>
+    <aura:attribute access="public" type="List" name="accListToDisplay"/>
+    <aura:attribute access="public" type="String" name="msg"/>
+    <lightning:card title="Account Display Text Based Search" footer="Thankyou" iconName="standard:account">
+        <div class="slds-p-left_medium slds-p-right_medium">
+            <lightning:input name="enter text" label="Enter the text" value="{!v.text}"></lightning:input><br/><br/>
+            <lightning:button label="Submit" variant="brand" onclick="{!c.displayAccountData}"></lightning:button><br/><br/>
+        </div>
+    </lightning:card>
+    <lightning:card title="Account Display Text Based Search Results" footer="Thankyou" iconName="standard:account">
+        <div class="slds-p-left_medium slds-p-right_medium">
+            <table>
+                <tr>
+                    <th>Account Id</th>
+                    <th>Account Name</th>
+                </tr>
+                <aura:iteration items="{!v.accListToDisplay}" var="a">
+                    <tr>
+                        <td>{!a.Id}</td>
+                        <td>{!a.Name}</td>
+                    </tr>
+                </aura:iteration>
+            </table>
+        </div>
+    </lightning:card>
+</aura:component>

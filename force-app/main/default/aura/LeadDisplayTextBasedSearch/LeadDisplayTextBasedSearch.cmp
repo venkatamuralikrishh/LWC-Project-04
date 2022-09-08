@@ -1,0 +1,17 @@
+<aura:component controller="LeadDisplayTextBasedSearch"
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute access="public" type="String" name="lname"></aura:attribute>
+    <aura:attribute access="public" type="List" name="leadList1"></aura:attribute>
+    <aura:attribute access="public" type="List" name="cols"></aura:attribute>
+    <aura:attribute access="public" type="String" name="msg"></aura:attribute>
+    <div class="slds-p-left_medium slds-p-right_medium">
+        <lightning:card title="Lead Information" footer="Thank You" iconName="standard:account">
+            <div class="slds-p-left_medium slds-p-right_medium">
+                <lightning:input label="Enter String" name="lead name" value="{!v.lname}"></lightning:input><br/><br/>
+                <lightning:button label="Submit" variant="brand" onclick="{!c.display}"></lightning:button>
+            </div>
+            <lightning:dataTable keyField="id" data="{!v.leadList1}" columns="{!v.cols}" hideCheckboxColumn="true"/>
+            <h1>{!msg}</h1>
+        </lightning:card>
+    </div>
+</aura:component>

@@ -1,0 +1,104 @@
+<apex:page >
+    <style>
+        td{font-size:15px;color:red !important}
+        .lang{color:green}
+        .coun{color:blue}
+    </style>
+    <center style="background-color:lightblue"><apex:image value="{!$Resource.Cat}"/></center>
+    <apex:form >
+        <apex:pageBlock title="User Form" tabStyle="VF_Assesment1__tab">
+            <table align="center" width="50%" style="background-color:lightyellow">
+                <tr>
+                    <td width="20%">
+                        <label> Uname </label>
+                    </td>
+                    <td width="30%">
+                        <apex:inputText label="Uname"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20%">
+                        <label> Password </label>
+                    </td>
+                    <td width="30%">
+                        <apex:inputSecret label="Password"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20%">
+                        <label> Resume </label>
+                    </td>
+                    <td width="30%">
+                        <apex:inputFile value="Resume"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20%">
+                        <label> Skills </label>
+                    </td>
+                    <td width="30%">
+                        <apex:inputCheckbox /><span style="color:blue">Salesforce</span> &nbsp;
+                        <apex:inputCheckbox /><span style="color:green">Java</span> &nbsp;
+                        <apex:inputCheckbox /><span style="color:blue">HTML</span> 
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20%">
+                        <label> Address </label>
+                    </td>
+                    <td width="30%">
+                        <apex:inputTextarea cols="30" rows="3"/> 
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20%">
+                        <label> Gender </label>
+                    </td>
+                    <td width="30%">
+                        <apex:selectRadio >
+                            <apex:selectOption itemLabel="Male" itemValue="m"></apex:selectOption>
+                            <apex:selectOption itemLabel="Female" itemValue="f"></apex:selectOption>
+                        </apex:selectRadio>  
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20%">
+                        <label> Country </label>
+                    </td>
+                    <td width="30%">
+                        <apex:selectList multiselect="false" size="1" styleClass="coun">
+                            <apex:selectOption itemLabel="India" itemValue="ind"/>
+                            <apex:selectOption itemLabel="Japan" itemValue="jap"/>
+                            <apex:selectOption itemLabel="Unites states" itemValue="us"/>
+                        </apex:selectList>  
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20%">
+                        <label> Languages </label>
+                    </td>
+                    <td width="30%">
+                        <apex:selectList multiselect="true" size="6" styleClass="lang">
+                            <apex:selectOption itemLabel="English" itemValue="eng"/>
+                            <apex:selectOption itemLabel="Hindi" itemValue="hin"/>
+                            <apex:selectOption itemLabel="Telugu" itemValue="tel"/>
+                            <apex:selectOption itemLabel="Tamil" itemValue="tam"/>
+                            <apex:selectOption itemLabel="Marathi" itemValue="mar"/>
+                            <apex:selectOption itemLabel="Bengali" itemValue="ben"/>
+                        </apex:selectList>  
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20%">
+                        
+                    </td>
+                    <td width="30%">
+                        <apex:commandButton value="Save"/>
+                        <apex:commandLink value="QuickSave"/>
+                        <input type="reset" value="clear"/>
+                    </td>
+                </tr>
+            </table>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

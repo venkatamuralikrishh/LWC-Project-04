@@ -1,0 +1,20 @@
+<apex:page controller="AntraEmployeeDisplayPageClass" sidebar="false">
+   <apex:form >
+     <center>
+        <apex:pageBlock >
+             <b>CandidateId&nbsp;<apex:inputText value="{!ename}"/>&nbsp;
+               <apex:commandButton value="Select" action="{!SearchRecord}"/></b>
+            <apex:pageBlockTable value="{!ae}" var="c">
+                <apex:column headerValue="CandidateId">
+                  <apex:outputLink value="DisplayAntraEmployee?id={!c.id}">{!c.Name}</apex:outputLink>
+                </apex:column>
+                <apex:column value="{!c.Name}"/>
+                <apex:column value="{!c.Employee_Email__c}"/>
+                <apex:column value="{!c.Employee_Phone__c}"/>
+                <apex:column value="{!c.Employee_Salary__c}"/>
+                
+           </apex:pageBlockTable>
+      </apex:pageBlock>
+    </center>
+  </apex:form>
+</apex:page>
