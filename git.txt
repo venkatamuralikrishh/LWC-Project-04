@@ -1,0 +1,79 @@
+Merge:
+------
+If you want to develop a new feature in your application and dont want to disturb the main branch development, we used to create a new child branch (feature) from main branch and try to develop that new feature in child branch. After successful developement, we will merge the child branch (feature) into main branch. This is called MERGING in Git.
+
+2 types of merging are there.
+
+1) Fast forward merge
+2) 3-way merge
+
+---------------------------------------------------------------------------------------------------------------------------------
+1) Fast forward merge: After creating a new child branch from main, if there is no commit (OR) change in those files in main branch, No merge conflicts at the time of merging child branch into main branch. Then GIT will do Fast-forward merge. After merging, main branch also points to latest commit in the child branch.
+
+
+2) 3-way merge: After creating a new child branch from main, if there are commits (or) changes in files in main branch, then there is a chance of merge conflicts at the time of merging. Then GIT will do 3-way merge. In this type of merge, GIT will create new commit and main branch/HEAD points to that new commit. This new commit is called merge commit.
+If there is any merge conflict while merging, then u have to manually choose what content to keep and what content to be removed after merging. Or, u can use p4merge, some merge tools to resolve conflicts also. If you are doing manual, you have to open vi editor in git bash by using the command and enter dd to remove the line and close the vi editor. Then u need to stage files and commit them. then finally merge commit will happen.
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+Rebase:
+-------
+If your requirement is having any one of below points then you have to go for rebase.
+1) Linear flow instead of non-linear flow
+2) New commits should not be created after merge commit
+3) we should not have any conflicts
+
+Rebase is alternative to merge operation. Rebase means re-arranging the base commit of child branch.
+Merge is single step process. git merge branchName. but rebase is 2-step process.
+
+Process of Rebase:
+------------------
+1) we have to rebase feature branch on top of master branch : whatever new commits are there in the feature branch will be duplicated by git. duplicated commits are same(like commit msg, time stamp, author name, mail id) except commit ID's. The base commit of feature branch will be updated as last commit of the master branch.
+	git checkout feature
+	git rebase master
+2) we have to merge feature into master branch (fast forward merge) : here the master branch will point to latest commit of child/feature branch. this is a fast forward merge & no merge commit will be created.
+	git checkout master
+	git merge feature
+	
+Advantages of Rebase:
+---------------------
+1) Rebase keeps history linear : every commit has a single parent
+2) clear work flow will be there. Easy to understand for the developers.
+3) Fast forward merge, no chance of conflicts
+4) No extra commit like merge commit
+
+
+Dis-advantages of Rebase:
+-------------------------
+1) It re-writes history.
+	we cant see history of commits from the feature branch
+2) we does not aware which changes are coming from feature branch
+
+
+Git Stash:
+----------
+git stash temporarily saves changes you've made to your working directory so that you can work on something else, and then come back and re-apply them later on.
+
+Note that the stash is local to your Git repository; stashes are not transferred to the server when you push.
+
+git stash is applicable only for tracked files.
+To perform git stash atleast one commit should be there.
+
+git stash pop:
+--------------
+It will bring stashed changes from temporary location to working directory.
+	The corresponding entry will be deleted in the stack.
+	
+git stash apply:
+--------------
+It will bring stashed changes from temporary location to working directory.
+	The corresponding entry won't be deleted in the stack. we can use this in another branches
+
+
+
+
+
+
+
+
+
